@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    .form-section {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    fieldset {
+      margin-top: 1rem;
+      padding: 1rem;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .checkbox-group label,
+    .radio-group label {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    button {
+      padding: 0.7rem 1.5rem;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style> -->
+</head>
+<body>
+    <fieldset>
+  <legend style="text-align: center;">Survey Form</legend>
+  <form id="form">
+    <div class="form-section">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+    </div>
+
+    <div class="form-section">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    </div>
+
+    <div class="form-section">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6" />
+    </div>
+
+    <div class="form-section">
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" placeholder="Enter your age" min="1" required />
+    </div>
+
+    <div class="form-section">
+      <label for="role">Which option best describes your role?</label>
+      <select id="role" name="role" required>
+        <option value="">-- Select your role --</option>
+        <option value="student">Student</option>
+        <option value="intern">Intern</option>
+        <option value="professional">Professional</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <fieldset>
+      <legend>Would you recommend GeeksforGeeks to a friend?</legend>
+      <div class="radio-group">
+        <label for="recommend-yes">
+          <input type="radio" id="recommend-yes" name="recommend" value="yes" required /> Yes
+        </label>
+        <label for="recommend-no">
+          <input type="radio" id="recommend-no" name="recommend" value="no" /> No
+        </label>
+        <label for="recommend-maybe">
+          <input type="radio" id="recommend-maybe" name="recommend" value="maybe" /> Maybe
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Languages and Frameworks Known <small>(Check all that apply)</small></legend>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="languages" value="C" /> C</label>
+        <label><input type="checkbox" name="languages" value="C++" /> C++</label>
+        <label><input type="checkbox" name="languages" value="C#" /> C#</label>
+        <label><input type="checkbox" name="languages" value="Java" /> Java</label>
+        <label><input type="checkbox" name="languages" value="Python" /> Python</label>
+        <label><input type="checkbox" name="languages" value="JavaScript" /> JavaScript</label>
+        <label><input type="checkbox" name="languages" value="React" /> React</label>
+        <label><input type="checkbox" name="languages" value="Angular" /> Angular</label>
+        <label><input type="checkbox" name="languages" value="Django" /> Django</label>
+        <label><input type="checkbox" name="languages" value="Spring" /> Spring</label>
+      </div>
+    </fieldset>
+
+    <div class="form-section">
+      <label for="comment">Any comments or suggestions</label>
+      <textarea id="comment" name="comment" rows="4" placeholder="Enter your comment here"></textarea>
+    </div>
+
+    <div class="form-section" style="text-align: center;">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</fieldset>
+</html>
